@@ -29,15 +29,14 @@ section#login {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /* tudo que estiver fora da borda vai ser escondido */
-
     background-color: white;
     width: 250px;
     height: 530px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #00000083;
 
+    transform: translate(-50%, -50%);
     transition: width 0.2s, height 0.2s;
     transition-timing-function: ease;
 }
@@ -66,6 +65,7 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
@@ -76,6 +76,28 @@ form > div.campo {
 div.campo > label {
     display: none; /*tira o nome login e senha*/
 
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40.2px;
+    padding: 5px;
+    
+}
+
+div.campo > input {
+    background-color: #60d3cf;
+    font-size: 1em;
+    width: calc(100% - 45px); /* encaixar o campo do input calculando o width do span */
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    transform: translateY(-12px);  /* modificar o input para cima */
+}
+
+div.campo > input:focus-within{  /* ganhar foco quando estiver digitando */
+    background-color: white;
 }
 
 form > input[type="submit"] {
